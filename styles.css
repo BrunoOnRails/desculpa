@@ -166,24 +166,30 @@ section {
 }
 
 .intro-section {
-    background: repeating-linear-gradient(
-        transparent,
-        transparent 31px,
-        var(--accent-pink) 31px,
-        var(--accent-pink) 32px
-    );
     padding-left: 70px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .intro-text {
     font-size: 1.1rem;
-    margin-bottom: 1rem;
+    line-height: 2;
+    margin-bottom: 0;
     text-align: justify;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent calc(2em - 1px),
+        var(--accent-pink) calc(2em - 1px),
+        var(--accent-pink) 2em
+    );
+    background-position-y: 0.85em;
 }
 
 .intro-text.small {
     font-size: 0.95rem;
     color: var(--ink-medium);
+    margin-top: 0.5rem;
 }
 
 .intro-text em {

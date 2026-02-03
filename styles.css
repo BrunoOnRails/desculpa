@@ -67,19 +67,7 @@ body {
 }
 
 .document::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50px;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, 
-        transparent 0%,
-        var(--accent-pink) 5%,
-        var(--accent-pink) 95%,
-        transparent 100%
-    );
-    opacity: 0.3;
+    display: none;
 }
 
 .document-header {
@@ -235,7 +223,7 @@ section {
 
 .checkbox-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.75rem;
     padding: 0.75rem 1rem;
     background: var(--paper-cream);
@@ -243,6 +231,7 @@ section {
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.2s ease;
+    min-height: 52px;
 }
 
 .checkbox-item:hover {
@@ -294,7 +283,6 @@ section {
 .checkbox-item .text {
     font-size: 0.95rem;
     line-height: 1.4;
-    padding-top: 2px;
 }
 
 .custom-error {
@@ -759,4 +747,3 @@ section {
         display: none;
     }
 }
-

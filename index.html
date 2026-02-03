@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Oficial de Desculpas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="paper-texture"></div>
+    
+    <main class="document">
+        <header class="document-header">
+            <div class="seal">
+                <span class="seal-icon">💔</span>
+                <span class="seal-text">OFICIAL</span>
+            </div>
+            <h1 class="title">Pedido Oficial de Desculpas</h1>
+            <p class="subtitle">Documento de Reconhecimento de Erros e Compromisso de Melhoria</p>
+            <div class="date-line">
+                <span class="label">Data do Ocorrido:</span>
+                <span class="value" id="current-date"></span>
+            </div>
+        </header>
+
+        <section class="intro-section">
+            <p class="intro-text">
+                Eu, o abaixo assinado, venho por meio deste documento 
+                <em>(que tem valor sentimental maior que qualquer contrato)</em>, 
+                reconhecer que <strong>pisei na bola</strong>, 
+                <strong>vacilei monumentalmente</strong> e que minha amada tem 
+                <strong>total razão</strong> em estar chateada comigo.
+            </p>
+            <p class="intro-text small">
+                Declaro ainda que tentei me explicar, mas como sempre, só piorei a situação. 
+                Portanto, recorro a este método oficial de desculpas.
+            </p>
+        </section>
+
+        <section class="errors-section">
+            <h2 class="section-title">
+                <span class="icon">📋</span>
+                Lista de Infrações Cometidas
+            </h2>
+            <p class="section-subtitle">Marque todas as opções aplicáveis (seja honesto, ela já sabe de tudo):</p>
+
+            <div class="checkbox-grid">
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="esqueci-data">
+                    <span class="checkmark"></span>
+                    <span class="text">Esqueci uma data importante</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="nao-respondi">
+                    <span class="checkmark"></span>
+                    <span class="text">Demorei 47 anos para responder mensagem</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="game">
+                    <span class="checkmark"></span>
+                    <span class="text">Priorizei o jogo ao invés de dar atenção</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="fome">
+                    <span class="checkmark"></span>
+                    <span class="text">Perguntei "onde você quer comer?" sabendo que ela ia dizer "tanto faz"</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="ciumes">
+                    <span class="checkmark"></span>
+                    <span class="text">Fui ciumento sem motivo</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="mal-humor">
+                    <span class="checkmark"></span>
+                    <span class="text">Descontei meu mal humor nela</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="nao-escutei">
+                    <span class="checkmark"></span>
+                    <span class="text">Não prestei atenção enquanto ela falava</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="comentario">
+                    <span class="checkmark"></span>
+                    <span class="text">Fiz um comentário infeliz</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="amigos">
+                    <span class="checkmark"></span>
+                    <span class="text">Marquei com os amigos em vez de ficar com ela</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="piroca">
+                    <span class="checkmark"></span>
+                    <span class="text">Fui um completo babaca sem perceber</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="mentira">
+                    <span class="checkmark"></span>
+                    <span class="text">Contei uma mentirinha "inofensiva"</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="erro" value="teimoso">
+                    <span class="checkmark"></span>
+                    <span class="text">Fui teimoso demais para admitir que estava errado</span>
+                </label>
+            </div>
+
+            <div class="custom-error">
+                <label for="outro-erro">Outro erro cometido (descreva sua vacilada):</label>
+                <textarea id="outro-erro" name="outro-erro" placeholder="Descreva aqui a besteira que você fez..."></textarea>
+            </div>
+        </section>
+
+        <section class="commitment-section">
+            <h2 class="section-title">
+                <span class="icon">📜</span>
+                Termo de Compromisso
+            </h2>
+            
+            <div class="commitment-box">
+                <p>
+                    Eu, <input type="text" id="nome-culpado" placeholder="Seu nome aqui" class="inline-input">, 
+                    declaro perante o amor que tenho por 
+                    <input type="text" id="nome-amada" placeholder="Nome dela" class="inline-input">, 
+                    que:
+                </p>
+                
+                <ol class="commitment-list">
+                    <li>
+                        <strong>Reconheço meu erro</strong> e admito que fui um(a) completo(a) 
+                        <span class="highlight">jumento</span> ao cometer a(s) infração(ões) marcada(s) acima.
+                    </li>
+                    <li>
+                        <strong>Comprometo-me ao máximo</strong> a não repetir o mesmo erro novamente, 
+                        ciente de que na próxima vez as consequências podem incluir: 
+                        <em>dormir no sofá, ficar sem beijo por tempo indeterminado, 
+                        ou pior... ter que assistir reality show.</em>
+                    </li>
+                    <li>
+                        <strong>Prometo compensar</strong> através de carinho extra, 
+                        atenção redobrada, e possivelmente um jantar romântico 
+                        <span class="small">(ou pelo menos um delivery decente)</span>.
+                    </li>
+                    <li>
+                        <strong>Aceito</strong> que este documento poderá ser usado contra mim 
+                        em futuras discussões como prova de que "eu já tinha avisado".
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="signature-section">
+            <h2 class="section-title">
+                <span class="icon">✒️</span>
+                Assinatura do Infrator
+            </h2>
+            
+            <div class="signature-area">
+                <canvas id="signature-pad" width="500" height="150"></canvas>
+                <div class="signature-line">
+                    <span class="line"></span>
+                    <span class="label">Assinatura (use o dedo ou mouse)</span>
+                </div>
+                <button type="button" id="clear-signature" class="btn-clear">Limpar Assinatura</button>
+            </div>
+        </section>
+
+        <section class="final-section">
+            <div class="heart-divider">
+                <span>💕</span>
+            </div>
+            
+            <p class="final-message">
+                Este pedido de desculpas é válido por tempo indeterminado e 
+                representa meu amor e arrependimento genuíno. 
+                <br><br>
+                <strong>Te amo, mesmo sendo um desastre às vezes.</strong>
+            </p>
+
+            <button type="button" id="generate-pdf" class="btn-generate">
+                <span class="btn-icon">📄</span>
+                Gerar Documento Oficial
+            </button>
+        </section>
+
+        <footer class="document-footer">
+            <p>Documento gerado com muito arrependimento em <span id="footer-date"></span></p>
+            <p class="footer-small">* Este documento não tem valor legal, mas tem valor sentimental infinito.</p>
+        </footer>
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Pedido de Desculpas Gerado!</h3>
+                <button id="close-modal" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button id="copy-link" class="btn-copy">Copiar como Texto</button>
+                <button id="close-modal-btn" class="btn-secondary">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

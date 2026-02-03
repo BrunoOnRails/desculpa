@@ -149,6 +149,32 @@ body {
     color: var(--ink-dark);
 }
 
+.date-input {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ink-dark);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--ink-light);
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+.date-input:focus {
+    outline: none;
+    border-bottom-color: var(--accent-gold);
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.date-input::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
 section {
     padding: 2rem;
 }
@@ -161,23 +187,14 @@ section {
 
 .intro-text {
     font-size: 1.1rem;
-    line-height: 2;
-    margin-bottom: 0;
+    line-height: 1.8;
+    margin-bottom: 1rem;
     text-align: justify;
-    background: repeating-linear-gradient(
-        to bottom,
-        transparent,
-        transparent calc(2em - 1px),
-        var(--accent-pink) calc(2em - 1px),
-        var(--accent-pink) 2em
-    );
-    background-position-y: 0.85em;
 }
 
 .intro-text.small {
     font-size: 0.95rem;
     color: var(--ink-medium);
-    margin-top: 0.5rem;
 }
 
 .intro-text em {

@@ -6,16 +6,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeDate() {
+    const dateInput = document.getElementById('current-date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.value = today;
+    
     const options = { 
         weekday: 'long', 
         year: 'numeric', 
         month: 'long', 
         day: 'numeric' 
     };
-    const today = new Date().toLocaleDateString('pt-BR', options);
-    
-    document.getElementById('current-date').textContent = today;
-    document.getElementById('footer-date').textContent = today;
+    const footerDate = new Date().toLocaleDateString('pt-BR', options);
+    document.getElementById('footer-date').textContent = footerDate;
+}
+
+function getFormattedDate() {
+    const dateInput = document.getElementById('current-date');
+    const date = new Date(dateInput.value + 'T00:00:00');
+    const options = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    };
+    return date.toLocaleDateString('pt-BR', options);
 }
 
 function initializeSignaturePad() {
@@ -131,12 +145,7 @@ function getSelectedErrors() {
 }
 
 function generateDocumentText(nomeCulpado, nomeAmada, selectedErrors, customError) {
-    const date = new Date().toLocaleDateString('pt-BR', { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-    });
+    const date = getFormattedDate();
 
     let text = `
 ═══════════════════════════════════════════
@@ -145,7 +154,7 @@ function generateDocumentText(nomeCulpado, nomeAmada, selectedErrors, customErro
         e Compromisso de Melhoria
 ═══════════════════════════════════════════
 
-Data: ${date}
+Data do Ocorrido: ${date}
 
 ───────────────────────────────────────────
 
